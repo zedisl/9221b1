@@ -11,70 +11,42 @@
 
 <body>
 
-<div class="lily-navigation">
+    <div class="lily-navigation">
 
-    <!-- ДОКУМЕНТ -->
+        <button
+            class="lily-button"
+            id="documentButton"
+            type="button"
+        >
+            <span class="button-icon">✦</span>
 
-    <button
-        class="lily-button"
-        type="button"
-        id="documentButton"
-    >
-
-        <span class="button-icon">✦</span>
-
-        <span class="button-content">
-
-            <span class="button-title">
-                ДОКУМЕНТ
+            <span class="button-content">
+                <span class="button-title">ДОКУМЕНТ</span>
+                <span class="button-subtitle">ОСНОВНОЕ ДОСЬЕ</span>
             </span>
 
-            <span class="button-subtitle">
-                ОСНОВНОЕ ДОСЬЕ
+            <span class="button-arrow">→</span>
+        </button>
+
+
+        <button
+            class="lily-button archive-button"
+            id="archiveButton"
+            type="button"
+        >
+            <span class="button-icon">❈</span>
+
+            <span class="button-content">
+                <span class="button-title">АРХИВ</span>
+                <span class="button-subtitle">ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ</span>
             </span>
 
-        </span>
+            <span class="button-arrow">→</span>
+        </button>
 
-        <span class="button-arrow">
-            →
-        </span>
+    </div>
 
-    </button>
-
-
-    <!-- АРХИВ -->
-
-    <button
-        class="lily-button archive-button"
-        type="button"
-        id="archiveButton"
-    >
-
-        <span class="button-icon">
-            ❈
-        </span>
-
-        <span class="button-content">
-
-            <span class="button-title">
-                АРХИВ
-            </span>
-
-            <span class="button-subtitle">
-                ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ
-            </span>
-
-        </span>
-
-        <span class="button-arrow">
-            →
-        </span>
-
-    </button>
-
-</div>
-
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>
