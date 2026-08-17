@@ -1,37 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500&display=swap');
 
 
-/* =========================================================
-   ОСНОВА
-========================================================= */
-
 * {
     box-sizing: border-box;
 }
 
+
 html,
 body {
     width: 100%;
-    min-height: 100%;
     margin: 0;
     padding: 0;
+
+    background: transparent;
 }
 
-body {
 
-    background:
-        radial-gradient(
-            circle at 50% 40%,
-            rgba(255, 218, 233, 0.8),
-            rgba(255, 246, 250, 0.95) 48%,
-            #fffafd 100%
-        );
+/*
+    ВАЖНО:
+    Никакого фонового оформления страницы.
+    Google Sites сам отвечает за фон.
+*/
+
+body {
+    overflow: hidden;
 
     font-family: "Inter", sans-serif;
-
-    color: #59404d;
-
-    overflow: hidden;
 }
 
 
@@ -41,84 +35,73 @@ body {
 
 .lily-navigation {
 
-    width: min(720px, 92vw);
+    width: 100%;
 
-    margin: 0 auto;
+    min-height: 130px;
 
     display: flex;
 
     justify-content: center;
-
-    align-items: stretch;
+    align-items: center;
 
     gap: 18px;
 
     padding: 20px;
+
 }
 
 
 /* =========================================================
-   КНОПКА
+   КНОПКИ
 ========================================================= */
 
 .lily-button {
 
     position: relative;
 
-    flex: 1;
-
-    min-width: 0;
-
-    min-height: 94px;
+    width: 320px;
+    height: 94px;
 
     display: flex;
-
     align-items: center;
-
-    text-align: left;
 
     padding: 18px 20px;
 
-    border: 1px solid rgba(198, 121, 151, 0.52);
+    border: 1px solid rgba(198, 121, 151, 0.58);
+
+    border-radius: 0;
 
     background:
         linear-gradient(
             145deg,
-            rgba(255, 255, 255, 0.99),
-            rgba(255, 241, 248, 0.97)
+            rgba(255,255,255,0.98),
+            rgba(255,242,248,0.98)
         );
 
-    color: #59404d;
+    color: #563b48;
 
     cursor: pointer;
 
     overflow: hidden;
 
     box-shadow:
-
-        0 12px 38px
-        rgba(204, 124, 155, 0.13),
+        0 10px 32px rgba(203, 121, 153, 0.13),
 
         0 0 0 1px
-        rgba(255,255,255,0.8),
+        rgba(255,255,255,0.7),
 
         inset 0 1px 0
         rgba(255,255,255,1);
 
     transition:
+        transform 0.45s cubic-bezier(.16,1,.3,1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
 
-        transform 0.5s
-        cubic-bezier(.16,1,.3,1),
-
-        box-shadow 0.45s ease,
-
-        border-color 0.45s ease;
 }
 
 
-/* =========================================================
-   ВНУТРЕННЯЯ РАМКА
-========================================================= */
+/* Внутренняя рамка */
 
 .lily-button::before {
 
@@ -129,15 +112,14 @@ body {
     inset: 6px;
 
     border: 1px solid
-        rgba(214, 137, 164, 0.17);
+        rgba(214,137,164,0.16);
 
     pointer-events: none;
+
 }
 
 
-/* =========================================================
-   СВЕТОВАЯ ПОЛОСА
-========================================================= */
+/* Световой проход */
 
 .lily-button::after {
 
@@ -146,11 +128,9 @@ body {
     position: absolute;
 
     top: -60%;
-
     left: -120%;
 
     width: 55%;
-
     height: 220%;
 
     transform: rotate(18deg);
@@ -164,11 +144,11 @@ body {
         );
 
     transition:
-
         left 0.9s
         cubic-bezier(.16,1,.3,1);
 
     pointer-events: none;
+
 }
 
 
@@ -180,27 +160,27 @@ body {
 
 
 /* =========================================================
-   HOVER
+   НАВЕДЕНИЕ
 ========================================================= */
 
 .lily-button:hover {
 
-    transform:
-        translateY(-4px);
+    transform: translateY(-4px);
 
     border-color:
-        rgba(199, 112, 147, 0.8);
+        rgba(199,112,147,0.82);
 
     box-shadow:
 
-        0 20px 55px
-        rgba(201, 113, 149, 0.22),
+        0 18px 48px
+        rgba(201,113,149,0.23),
 
-        0 0 40px
-        rgba(255, 208, 226, 0.7),
+        0 0 36px
+        rgba(255,208,226,0.62),
 
         inset 0 1px 0
         rgba(255,255,255,1);
+
 }
 
 
@@ -212,47 +192,38 @@ body {
 
     position: relative;
 
-    z-index: 3;
+    z-index: 2;
 
-    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
 
-    width: 42px;
-
-    height: 42px;
+    flex: 0 0 40px;
 
     display: flex;
 
+    justify-content: center;
     align-items: center;
 
-    justify-content: center;
+    margin-right: 16px;
 
-    margin-right: 17px;
+    border: 1px solid
+        rgba(207,122,155,0.4);
 
-    border:
-
-        1px solid
-        rgba(207, 122, 155, 0.38);
-
-    color: #c87598;
-
-    font-size: 16px;
+    color: #c57496;
 
     background:
-        rgba(255,255,255,0.38);
+        rgba(255,255,255,0.35);
 
-    box-shadow:
-
-        0 0 20px
-        rgba(225, 139, 171, 0.12);
+    font-size: 15px;
 
     transition:
-
-        transform 0.45s
+        transform 0.4s
         cubic-bezier(.16,1,.3,1),
 
-        background 0.4s ease,
+        box-shadow 0.4s ease,
 
-        box-shadow 0.4s ease;
+        background 0.4s ease;
+
 }
 
 
@@ -263,24 +234,24 @@ body {
         scale(1.08);
 
     background:
-        rgba(255, 235, 244, 0.8);
+        rgba(255,235,244,0.8);
 
     box-shadow:
+        0 0 22px
+        rgba(224,138,170,0.23);
 
-        0 0 25px
-        rgba(225, 139, 171, 0.25);
 }
 
 
 /* =========================================================
-   ТЕКСТОВЫЙ БЛОК
+   ТЕКСТ
 ========================================================= */
 
 .button-content {
 
     position: relative;
 
-    z-index: 3;
+    z-index: 2;
 
     display: flex;
 
@@ -288,15 +259,14 @@ body {
 
     justify-content: center;
 
-    min-width: 0;
+    align-items: flex-start;
 
     gap: 5px;
+
 }
 
 
-/* =========================================================
-   НАЗВАНИЕ
-========================================================= */
+/* Основное название */
 
 .button-title {
 
@@ -312,17 +282,18 @@ body {
 
     line-height: 1.2;
 
-    color: #523845;
+    color: #513641;
 
-    white-space: nowrap;
 }
 
 
-/* =========================================================
-   ПОДЗАГОЛОВОК
-========================================================= */
+/* Вторичный текст */
 
 .button-subtitle {
+
+    font-family:
+        "Inter",
+        sans-serif;
 
     font-size: 8px;
 
@@ -332,9 +303,8 @@ body {
 
     line-height: 1.4;
 
-    color: #866472;
+    color: #82616f;
 
-    white-space: nowrap;
 }
 
 
@@ -346,38 +316,37 @@ body {
 
     position: relative;
 
-    z-index: 3;
-
-    flex: 0 0 auto;
+    z-index: 2;
 
     margin-left: auto;
 
-    padding-left: 15px;
+    padding-left: 16px;
 
     font-size: 21px;
 
-    color: #c97398;
+    color: #c57095;
 
     transition:
-
-        transform 0.45s
+        transform 0.4s
         cubic-bezier(.16,1,.3,1),
 
-        color 0.35s ease;
+        color 0.3s ease;
+
 }
 
 
 .lily-button:hover .button-arrow {
 
     transform:
-        translateX(7px);
+        translateX(6px);
 
-    color: #b95e87;
+    color: #b55b85;
+
 }
 
 
 /* =========================================================
-   АРХИВ — НЕМНОГО ДРУГОЙ АКЦЕНТ
+   АРХИВ
 ========================================================= */
 
 .archive-button {
@@ -385,32 +354,10 @@ body {
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.99),
-            rgba(255,238,246,0.98)
+            rgba(255,255,255,0.98),
+            rgba(255,237,246,0.98)
         );
 
-}
-
-
-.archive-button .button-icon {
-
-    color: #bd6389;
-
-}
-
-
-.archive-button:hover {
-
-    box-shadow:
-
-        0 20px 58px
-        rgba(194, 99, 139, 0.25),
-
-        0 0 45px
-        rgba(255, 199, 221, 0.72),
-
-        inset 0 1px 0
-        rgba(255,255,255,1);
 }
 
 
@@ -421,7 +368,6 @@ body {
 .lily-button:active {
 
     transform:
-
         translateY(-1px)
         scale(0.985);
 
@@ -429,36 +375,43 @@ body {
 
 
 /* =========================================================
-   МОБИЛЬНАЯ ВЕРСИЯ
+   МОБИЛЬНЫЕ
 ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 720px) {
 
     .lily-navigation {
 
-        width: min(380px, 94vw);
-
         flex-direction: column;
 
-        gap: 13px;
+        min-height: 220px;
+
+        gap: 12px;
 
         padding: 15px;
+
     }
 
 
     .lily-button {
 
-        min-height: 84px;
+        width: min(340px, 92vw);
 
-        padding: 16px;
+        height: 82px;
+
     }
 
+}
+
+
+@media (max-width: 400px) {
 
     .button-title {
 
         font-size: 12px;
 
-        letter-spacing: 2.5px;
+        letter-spacing: 2.4px;
+
     }
 
 
@@ -466,17 +419,20 @@ body {
 
         font-size: 7px;
 
-        letter-spacing: 1.6px;
+        letter-spacing: 1.5px;
+
     }
 
 
     .button-icon {
 
-        width: 38px;
+        width: 36px;
+        height: 36px;
 
-        height: 38px;
+        flex-basis: 36px;
 
-        margin-right: 14px;
+        margin-right: 13px;
+
     }
 
 }
