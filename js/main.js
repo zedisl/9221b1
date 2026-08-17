@@ -1,8 +1,8 @@
 const DOCUMENT_URL =
-    "https://example.com/document";
+    "https://sites.google.com/view/scp9221/document";
 
 const ARCHIVE_URL =
-    "https://example.com/archive";
+    "https://sites.google.com/view/scp9221/doc";
 
 
 const documentButton =
