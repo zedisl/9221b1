@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500&display=swap');
+@import url(
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500&display=swap'
+);
 
+
+/* =========================================================
+   BASE
+========================================================= */
 
 * {
     box-sizing: border-box;
 }
-
 
 html,
 body {
@@ -15,93 +20,93 @@ body {
     background: transparent;
 }
 
-
-/*
-    ВАЖНО:
-    Никакого фонового оформления страницы.
-    Google Sites сам отвечает за фон.
-*/
-
 body {
     overflow: hidden;
 
-    font-family: "Inter", sans-serif;
+    font-family:
+        "Inter",
+        sans-serif;
 }
 
 
 /* =========================================================
-   КОНТЕЙНЕР
+   CONTAINER
 ========================================================= */
 
 .lily-navigation {
 
     width: 100%;
 
-    min-height: 130px;
-
     display: flex;
 
     justify-content: center;
     align-items: center;
 
-    gap: 18px;
+    gap: 24px;
 
-    padding: 20px;
-
+    padding: 22px;
 }
 
 
 /* =========================================================
-   КНОПКИ
+   BUTTON
 ========================================================= */
 
 .lily-button {
 
     position: relative;
 
-    width: 320px;
-    height: 94px;
+    width: 360px;
+    height: 110px;
+
+    flex: 0 1 360px;
 
     display: flex;
     align-items: center;
 
-    padding: 18px 20px;
+    padding: 20px 24px;
 
-    border: 1px solid rgba(198, 121, 151, 0.58);
-
-    border-radius: 0;
+    border: 1px solid
+        rgba(194, 116, 147, 0.62);
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.98),
-            rgba(255,242,248,0.98)
+            rgba(255,255,255,0.985),
+            rgba(255,241,248,0.985)
         );
 
-    color: #563b48;
+    color: #523641;
 
     cursor: pointer;
 
     overflow: hidden;
 
     box-shadow:
-        0 10px 32px rgba(203, 121, 153, 0.13),
+
+        0 14px 40px
+        rgba(202, 121, 153, 0.14),
 
         0 0 0 1px
-        rgba(255,255,255,0.7),
+        rgba(255,255,255,0.78),
 
         inset 0 1px 0
         rgba(255,255,255,1);
 
     transition:
-        transform 0.45s cubic-bezier(.16,1,.3,1),
-        box-shadow 0.4s ease,
-        border-color 0.4s ease;
 
+        transform 0.5s
+        cubic-bezier(.16,1,.3,1),
+
+        box-shadow 0.45s ease,
+
+        border-color 0.45s ease;
 }
 
 
-/* Внутренняя рамка */
+/* =========================================================
+   INNER FRAME
+========================================================= */
 
 .lily-button::before {
 
@@ -109,17 +114,19 @@ body {
 
     position: absolute;
 
-    inset: 6px;
+    inset: 7px;
 
     border: 1px solid
-        rgba(214,137,164,0.16);
+        rgba(212, 133, 160, 0.18);
 
     pointer-events: none;
 
 }
 
 
-/* Световой проход */
+/* =========================================================
+   SCAN LIGHT
+========================================================= */
 
 .lily-button::after {
 
@@ -127,19 +134,19 @@ body {
 
     position: absolute;
 
-    top: -60%;
+    top: -80%;
     left: -120%;
 
     width: 55%;
-    height: 220%;
+    height: 260%;
 
-    transform: rotate(18deg);
+    transform: rotate(17deg);
 
     background:
         linear-gradient(
             90deg,
             transparent,
-            rgba(255,255,255,0.9),
+            rgba(255,255,255,0.92),
             transparent
         );
 
@@ -148,44 +155,41 @@ body {
         cubic-bezier(.16,1,.3,1);
 
     pointer-events: none;
-
 }
-
 
 .lily-button:hover::after {
 
     left: 145%;
-
 }
 
 
 /* =========================================================
-   НАВЕДЕНИЕ
+   HOVER
 ========================================================= */
 
 .lily-button:hover {
 
-    transform: translateY(-4px);
+    transform:
+        translateY(-5px);
 
     border-color:
-        rgba(199,112,147,0.82);
+        rgba(194, 105, 143, 0.86);
 
     box-shadow:
 
-        0 18px 48px
-        rgba(201,113,149,0.23),
+        0 22px 58px
+        rgba(198, 111, 146, 0.24),
 
-        0 0 36px
-        rgba(255,208,226,0.62),
+        0 0 48px
+        rgba(255, 207, 226, 0.74),
 
         inset 0 1px 0
         rgba(255,255,255,1);
-
 }
 
 
 /* =========================================================
-   ИКОНКА
+   ICON
 ========================================================= */
 
 .button-icon {
@@ -194,57 +198,122 @@ body {
 
     z-index: 2;
 
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
 
-    flex: 0 0 40px;
+    flex: 0 0 48px;
 
     display: flex;
 
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    margin-right: 16px;
+    margin-right: 19px;
 
-    border: 1px solid
-        rgba(207,122,155,0.4);
-
-    color: #c57496;
+    border:
+        1px solid
+        rgba(204, 118, 151, 0.42);
 
     background:
-        rgba(255,255,255,0.35);
+        rgba(255,255,255,0.38);
 
-    font-size: 15px;
+    box-shadow:
+
+        0 0 22px
+        rgba(225, 135, 170, 0.12);
 
     transition:
-        transform 0.4s
+
+        transform 0.5s
         cubic-bezier(.16,1,.3,1),
 
-        box-shadow 0.4s ease,
+        background 0.35s ease,
 
-        background 0.4s ease;
+        box-shadow 0.35s ease;
+}
+
+
+/* геометрический символ */
+
+.button-icon span {
+
+    width: 17px;
+    height: 17px;
+
+    display: block;
+
+    border:
+        1px solid
+        #c57498;
+
+    transform:
+        rotate(45deg);
+
+    position: relative;
+}
+
+
+/* внутренний символ */
+
+.button-icon span::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    left: 5px;
+    top: 5px;
+
+    background:
+        #e4a1bb;
 
 }
 
 
-.lily-button:hover .button-icon {
+/* архив отличается */
+
+.archive-icon span {
+
+    border-radius: 50%;
+
+    transform: none;
+
+}
+
+.archive-icon span::after {
+
+    left: 5px;
+    top: 5px;
+
+    border-radius: 50%;
+
+}
+
+
+/* hover icon */
+
+.lily-button:hover
+.button-icon {
 
     transform:
-        rotate(12deg)
+        rotate(7deg)
         scale(1.08);
 
     background:
-        rgba(255,235,244,0.8);
+        rgba(255,232,243,0.9);
 
     box-shadow:
-        0 0 22px
-        rgba(224,138,170,0.23);
 
+        0 0 28px
+        rgba(222, 132, 166, 0.25);
 }
 
 
 /* =========================================================
-   ТЕКСТ
+   TEXT CONTENT
 ========================================================= */
 
 .button-content {
@@ -257,16 +326,34 @@ body {
 
     flex-direction: column;
 
-    justify-content: center;
-
     align-items: flex-start;
+
+    justify-content: center;
 
     gap: 5px;
 
 }
 
 
-/* Основное название */
+/* техническая строка */
+
+.button-meta {
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color:
+        #a06f83;
+
+    line-height: 1;
+
+}
+
+
+/* заголовок */
 
 .button-title {
 
@@ -274,79 +361,79 @@ body {
         "Montserrat",
         sans-serif;
 
-    font-size: 14px;
+    font-size: 17px;
 
     font-weight: 500;
 
     letter-spacing: 3px;
 
-    line-height: 1.2;
+    line-height: 1.15;
 
-    color: #513641;
-
+    color:
+        #4f3440;
 }
 
 
-/* Вторичный текст */
+/* описание */
 
 .button-subtitle {
-
-    font-family:
-        "Inter",
-        sans-serif;
 
     font-size: 8px;
 
     font-weight: 600;
 
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
 
     line-height: 1.4;
 
-    color: #82616f;
-
+    color:
+        #836170;
 }
 
 
 /* =========================================================
-   СТРЕЛКА
+   DECORATIVE LINE
 ========================================================= */
 
-.button-arrow {
+.button-line {
 
-    position: relative;
+    position: absolute;
 
-    z-index: 2;
+    left: 24px;
+    right: 24px;
 
-    margin-left: auto;
+    bottom: 10px;
 
-    padding-left: 16px;
+    height: 1px;
 
-    font-size: 21px;
-
-    color: #c57095;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(210,126,156,0.0),
+            rgba(210,126,156,0.28),
+            rgba(210,126,156,0.0)
+        );
 
     transition:
-        transform 0.4s
-        cubic-bezier(.16,1,.3,1),
-
-        color 0.3s ease;
-
+        background 0.4s ease;
 }
 
 
-.lily-button:hover .button-arrow {
+.lily-button:hover
+.button-line {
 
-    transform:
-        translateX(6px);
-
-    color: #b55b85;
-
+    background:
+        linear-gradient(
+            90deg,
+            rgba(210,126,156,0),
+            rgba(210,126,156,0.62),
+            rgba(210,126,156,0)
+        );
 }
 
 
 /* =========================================================
-   АРХИВ
+   ARCHIVE VARIANT
 ========================================================= */
 
 .archive-button {
@@ -354,84 +441,103 @@ body {
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.98),
-            rgba(255,237,246,0.98)
+            rgba(255,255,255,0.985),
+            rgba(255,237,246,0.99)
         );
 
 }
 
+.archive-button:hover {
+
+    box-shadow:
+
+        0 22px 62px
+        rgba(194, 101, 142, 0.27),
+
+        0 0 54px
+        rgba(255, 201, 223, 0.78),
+
+        inset 0 1px 0
+        rgba(255,255,255,1);
+}
+
 
 /* =========================================================
-   НАЖАТИЕ
+   PRESS
 ========================================================= */
 
 .lily-button:active {
 
     transform:
         translateY(-1px)
-        scale(0.985);
+        scale(.985);
 
 }
 
 
 /* =========================================================
-   МОБИЛЬНЫЕ
+   MOBILE
 ========================================================= */
 
-@media (max-width: 720px) {
+@media (max-width: 790px) {
 
     .lily-navigation {
 
         flex-direction: column;
 
-        min-height: 220px;
+        gap: 14px;
 
-        gap: 12px;
-
-        padding: 15px;
+        padding: 18px;
 
     }
 
-
     .lily-button {
 
-        width: min(340px, 92vw);
+        width: min(
+            390px,
+            92vw
+        );
 
-        height: 82px;
+        flex-basis: auto;
 
     }
 
 }
 
+@media (max-width: 420px) {
 
-@media (max-width: 400px) {
+    .lily-button {
 
-    .button-title {
+        height: 100px;
 
-        font-size: 12px;
+        padding:
+            17px 18px;
+    }
 
-        letter-spacing: 2.4px;
+    .button-icon {
+
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+
+        margin-right: 14px;
 
     }
 
+    .button-title {
+
+        font-size: 14px;
+
+        letter-spacing: 2.5px;
+
+    }
 
     .button-subtitle {
 
         font-size: 7px;
 
-        letter-spacing: 1.5px;
-
-    }
-
-
-    .button-icon {
-
-        width: 36px;
-        height: 36px;
-
-        flex-basis: 36px;
-
-        margin-right: 13px;
+        letter-spacing: 1.4px;
 
     }
 

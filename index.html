@@ -2,7 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>SCP-9221 — Навигация</title>
 
@@ -11,42 +14,76 @@
 
 <body>
 
-    <div class="lily-navigation">
+<div class="lily-navigation">
 
-        <button
-            class="lily-button"
-            id="documentButton"
-            type="button"
-        >
-            <span class="button-icon">✦</span>
+    <!-- ДОКУМЕНТ -->
 
-            <span class="button-content">
-                <span class="button-title">ДОКУМЕНТ</span>
-                <span class="button-subtitle">ОСНОВНОЕ ДОСЬЕ</span>
+    <button
+        class="lily-button"
+        id="documentButton"
+        type="button"
+    >
+
+        <span class="button-icon">
+            <span></span>
+        </span>
+
+        <span class="button-content">
+
+            <span class="button-meta">
+                АРХИВ ДОКУМЕНТА // 01
             </span>
 
-            <span class="button-arrow">→</span>
-        </button>
-
-
-        <button
-            class="lily-button archive-button"
-            id="archiveButton"
-            type="button"
-        >
-            <span class="button-icon">❈</span>
-
-            <span class="button-content">
-                <span class="button-title">АРХИВ</span>
-                <span class="button-subtitle">ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ</span>
+            <span class="button-title">
+                ДОКУМЕНТ
             </span>
 
-            <span class="button-arrow">→</span>
-        </button>
+            <span class="button-subtitle">
+                ОСНОВНОЕ ДОСЬЕ SCP-9221
+            </span>
 
-    </div>
+        </span>
 
-    <script src="js/main.js"></script>
+        <span class="button-line"></span>
+
+    </button>
+
+
+    <!-- АРХИВ -->
+
+    <button
+        class="lily-button archive-button"
+        id="archiveButton"
+        type="button"
+    >
+
+        <span class="button-icon archive-icon">
+            <span></span>
+        </span>
+
+        <span class="button-content">
+
+            <span class="button-meta">
+                АРХИВ ДОКУМЕНТА // 02
+            </span>
+
+            <span class="button-title">
+                АРХИВ
+            </span>
+
+            <span class="button-subtitle">
+                ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ
+            </span>
+
+        </span>
+
+        <span class="button-line"></span>
+
+    </button>
+
+</div>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>

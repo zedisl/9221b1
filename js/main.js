@@ -6,17 +6,23 @@ const ARCHIVE_URL =
 
 
 const documentButton =
-    document.getElementById("documentButton");
+    document.getElementById(
+        "documentButton"
+    );
 
 const archiveButton =
-    document.getElementById("archiveButton");
+    document.getElementById(
+        "archiveButton"
+    );
 
 
 documentButton.addEventListener(
     "click",
     () => {
+
         window.top.location.href =
             DOCUMENT_URL;
+
     }
 );
 
@@ -24,7 +30,9 @@ documentButton.addEventListener(
 archiveButton.addEventListener(
     "click",
     () => {
+
         window.top.location.href =
             ARCHIVE_URL;
+
     }
 );
